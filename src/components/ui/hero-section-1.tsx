@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { ArrowRight, ChevronRight, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { AnimatedGroup } from '@/components/ui/animated-group';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
+import { Waves } from '@/components/ui/waves-background';
 
 const transitionVariants = {
     item: {
@@ -66,13 +66,21 @@ export function HeroSection() {
                                 },
                             }}
                             className="absolute inset-0 -z-20">
-                            <img
-                                src="https://ik.imagekit.io/lrigu76hy/tailark/night-background.jpg?updatedAt=1745733451120"
-                                alt="background"
-                                className="absolute inset-x-0 top-56 -z-20 lg:top-32 block"
-                                width="3276"
-                                height="4095"
-                            />
+                            <div className="absolute inset-0">
+                                <Waves 
+                                    lineColor="rgba(255, 255, 255, 0.2)" 
+                                    backgroundColor="transparent"
+                                    waveSpeedX={0.015}
+                                    waveSpeedY={0.01}
+                                    waveAmpX={40}
+                                    waveAmpY={20}
+                                    friction={0.9}
+                                    tension={0.008}
+                                    maxCursorMove={120}
+                                    xGap={14}
+                                    yGap={40}
+                                />
+                            </div>
                         </AnimatedGroup>
                         <div aria-hidden className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]" />
                         <div className="mx-auto max-w-7xl px-6">

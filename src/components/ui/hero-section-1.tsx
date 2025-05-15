@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight, ChevronRight, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -112,16 +113,19 @@ export function HeroSection() {
                                             </Link>
                                         </Button>
                                     </div>
-                                    <Button
+                                    <div
                                         key={2}
-                                        asChild
-                                        size="lg"
-                                        variant="ghost"
-                                        className="h-10.5 rounded-xl px-5">
-                                        <Link to="#link">
-                                            <span className="text-nowrap">Go to my CV</span>
-                                        </Link>
-                                    </Button>
+                                        className="bg-foreground/5 rounded-[14px] p-0.5">
+                                        <Button
+                                            asChild
+                                            size="lg"
+                                            variant="ghost"
+                                            className="rounded-xl px-5 text-base">
+                                            <Link to="#link">
+                                                <span className="text-nowrap">Go to my CV</span>
+                                            </Link>
+                                        </Button>
+                                    </div>
                                 </AnimatedGroup>
                             </div>
                         </div>
